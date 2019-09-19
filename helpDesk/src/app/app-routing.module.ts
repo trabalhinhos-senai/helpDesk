@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'abrir-chamado', component: AbrirChamadoComponent, data: { title: 'Abrir Chamado' } },
   { path: 'chamados', component: ChamadosComponent },
   { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: '/chamados', pathMatch: 'full' }
+  { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 
 @NgModule({
