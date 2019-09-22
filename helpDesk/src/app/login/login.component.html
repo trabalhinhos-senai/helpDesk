@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">H-HelpDesk</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse">
@@ -19,27 +20,30 @@
         <div class="user_card">
             <div class="d-flex justify-content-center">
                 <div class="brand_logo_container">
-                    <img src="https://pbs.twimg.com/profile_images/484250911162646529/kM2dke2__400x400.png" class="brand_logo" alt="Logo">
+                    <img src="https://pbs.twimg.com/profile_images/484250911162646529/kM2dke2__400x400.png"
+                        class="brand_logo" alt="Logo">
                 </div>
             </div>
             <div class="d-flex justify-content-center">
-                <form>
+                <form #form="ngForm">
                     <div class="input-group mb-3">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="text" name="" class="form-control input_user" value="" placeholder="username">
+                        <input type="text" name="nome" id="nome" class="form-control input_user" value=""
+                            placeholder="username" [(ngModel)]="usuario.nome">
                     </div>
                     <div class="input-group mb-2">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
-                        <input type="password" name="" class="form-control input_pass" value="" placeholder="password">
+                        <input type="password" name="senha" id="senha" class="form-control input_pass" value=""
+                            placeholder="password" [(ngModel)]="usuario.senha">
                     </div>
                 </form>
             </div>
             <div class="d-flex justify-content-center my-3 login_container">
-                <button type="button" name="button" class="btn login_btn" routerLink="/chamados"> Login</button>
+                <button type="submit" name="button" class="btn login_btn" (click)="fazerLogin()"> Login</button>
             </div>
             <div class="d-flex justify-content-center login_container mb-0 mx-3 alert alert-info" role="alert">
                 Digite seu usuario e senha
@@ -47,4 +51,9 @@
             </div>
         </div>
     </div>
+    <div class="d-flex justify-content-center login_container m-3 alert" role="alert">
+            Usuário: admin<br />
+            Senha: admin
+            <!-- Usuario ou senha está incorreto! -->
+        </div>
 </div>
