@@ -10,6 +10,8 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from './login/auth.service';
 import { AuthGuard } from './guards/auth-guard';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { CadUsuarioComponent } from './cad-usuario/cad-usuario.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { AuthGuard } from './guards/auth-guard';
     NavBarComponent,
     ChamadosComponent,
     AbrirChamadoComponent,
-    LoginComponent
+    LoginComponent,
+    UsuarioComponent,
+    CadUsuarioComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,42 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container my-md-3">
+    <button type="submit" class="btn btn-dark mb-md-4" routerLink="/usuarios">Voltar</button>
+
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputNome">Nome</label>
+                <input name="inputNome" type="Text" class="form-control" id="inputNome">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="inputLogin">Login</label>
+                <input name="inputLogin" type="Text" class="form-control" id="inputLogin">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="inputSenha">Senha</label>
+                <input name="inputSenha" type="password" class="form-control" id="inputSenha">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="inputConfirmarSenha">Confirmar Senha</label>
+                <input name="inputConfirmarSenha" type="password" class="form-control" id="inputConfirmarSenha">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="selectGrupoAcesso">Grupo de acesso</label>
+                <select name="selectGrupoAcesso" class="form-control" id="selectGrupoAcesso" >
+                    <option selected>User</option>
+                    <option>Admin</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success mt-md-3">Cadastrar usuário</button>
+    </form>
+</div>

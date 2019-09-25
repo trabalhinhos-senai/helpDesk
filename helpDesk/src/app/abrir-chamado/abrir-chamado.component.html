@@ -1,7 +1,10 @@
 <app-nav-bar></app-nav-bar>
+
 <div class="container my-md-3">
+    <button type="submit" class="btn btn-dark mb-md-4" routerLink="/chamados">Voltar</button>
+
     <form>
-        <div class="form-row">
+        <div class="form-row ">
             <div class="form-group col-md-6">
                 <label for="inputSolicitante">Solicitante</label>
                 <input name="inputSolicitante" type="Text" class="form-control" id="inputSolicitante">
@@ -26,11 +29,14 @@
                 </select>
             </div>
         </div>
-
-        <div class="form-group">
-            <label for="inputDescricao">Descrição</label>
-            <textarea name="inputDescricao" class="form-control" id="inputDescricao" rows="5"></textarea>
+        
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="inputDescricao">Descrição</label>
+                <textarea name="inputDescricao" class="form-control" id="inputDescricao" rows="5"></textarea>
+            </div>
         </div>
+        
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputResponsavel">Responsável</label>
@@ -62,6 +68,6 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-success">Cadastrar chamado</button>
+        <button type="submit" class="btn btn-success mt-md-3">Cadastrar chamado</button>
     </form>
 </div>
