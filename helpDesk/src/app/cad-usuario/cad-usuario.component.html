@@ -1,25 +1,28 @@
 <app-nav-bar></app-nav-bar>
 
 <div class="container my-md-3">
-    <button type="submit" class="btn btn-dark mb-md-4" routerLink="/usuarios">Voltar</button>
+    <button type="button" class="btn btn-dark mb-md-4" routerLink="/usuarios">Voltar</button>
 
-    <form>
+    <form #formUsuario="ngForm" (ngSubmit)="onSubmit(formUsuario)">
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label for="inputNome">Nome</label>
-                <input name="inputNome" type="Text" class="form-control" id="inputNome">
+                <input name="inputNome" type="Text" class="form-control" id="inputNome" 
+                    required #inputNome="ngModel" [(ngModel)]="usuario.nome">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-3">
                 <label for="inputLogin">Login</label>
-                <input name="inputLogin" type="Text" class="form-control" id="inputLogin">
+                <input name="inputLogin" type="Text" class="form-control" id="inputLogin"
+                required #inputLogin="ngModel" [(ngModel)]="usuario.login">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-3">
                 <label for="inputSenha">Senha</label>
-                <input name="inputSenha" type="password" class="form-control" id="inputSenha">
+                <input name="inputSenha" type="password" class="form-control" id="inputSenha"
+                    required #inputSenha="ngModel" [(ngModel)]="usuario.senha">
             </div>
         </div>
         <div class="form-row">
@@ -31,7 +34,8 @@
         <div class="form-row">
             <div class="form-group col-md-3">
                 <label for="selectGrupoAcesso">Grupo de acesso</label>
-                <select name="selectGrupoAcesso" class="form-control" id="selectGrupoAcesso" >
+                <select name="selectGrupoAcesso" class="form-control" id="selectGrupoAcesso" 
+                    required #selectGrupoAcesso="ngModel" [(ngModel)]="usuario.grupo">
                     <option selected>User</option>
                     <option>Admin</option>
                 </select>

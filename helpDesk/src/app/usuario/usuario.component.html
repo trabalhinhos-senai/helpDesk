@@ -15,26 +15,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>1</td>
-                <td>administrador</td>
-                <td>admin</td>
-                <td>Admin</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>2</td>
-                <td>Gabriel Raimondi</td>
-                <td>Gabriel</td>
-                <td>User</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>3</td>
-                <td>Igor Bigodin Ponchielli</td>
-                <td>Igostoso</td>
-                <td>User</td>
+            <tr *ngFor="let usuario of Usuarios">
+                <td>{{usuario.id}}</td>
+                <td>{{usuario.nome}}</td>
+                <td>{{usuario.login}}</td>
+                <td>{{usuario.grupo}}</td>
             </tr>
         </tbody>
     </table>
