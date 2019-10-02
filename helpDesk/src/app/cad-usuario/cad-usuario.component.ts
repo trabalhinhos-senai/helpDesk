@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../login/usuario';
 import { CadUsuarioService } from './cad-usuario.service';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-cad-usuario',
@@ -22,21 +22,18 @@ export class CadUsuarioComponent implements OnInit {
 
   onSubmit(formulario: NgForm) {
     if (formulario.valid) {
-      console.log(this.usuario)
+
 
       if (this.usuario.senha === this.confirmarSenha) {
 
-        //console.log(this.confirmarSenha)
+        console.log(this.usuario)
         this.cadUsuarioService.cadastrar(this.usuario);
-        
-        formulario.reset();
-        
+        console.log(this.usuario.nome)
+
         this.showAlert();
 
       } else {
-
         console.log("não confere");
-
       }
 
 

@@ -12,10 +12,7 @@
             <div class="form-row">
                 <div class="form-group col-md-12">
                     <label for="inputNome">Nome</label>
-                    <input name="inputNome" type="Text" class="form-control" id="inputNome" 
-                        ngClass="{
-                            'has-error': !
-                        }" required
+                    <input name="inputNome" type="Text" class="form-control" id="inputNome" required
                         #inputNome="ngModel" [(ngModel)]="usuario.nome">
                 </div>
             </div>
@@ -50,7 +47,7 @@
                     </select>
                 </div>
             </div>
-            <button type="submit" class="btn btn-success mt-md-3">Cadastrar usuário</button>
+            <button type="submit" class="btn btn-success mt-md-3" [disabled]="!formUsuario.valid">Cadastrar usuário</button>
         </form>
     </div>
 </div>
