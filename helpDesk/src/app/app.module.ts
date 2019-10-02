@@ -21,13 +21,13 @@ import { CadUsuarioComponent } from './cad-usuario/cad-usuario.component';
     AbrirChamadoComponent,
     LoginComponent,
     UsuarioComponent,
-    CadUsuarioComponent
+    CadUsuarioComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
