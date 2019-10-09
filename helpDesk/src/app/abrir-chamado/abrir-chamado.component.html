@@ -3,7 +3,7 @@
 <div class="container my-md-3">
     <button type="submit" class="btn btn-dark mb-md-4" routerLink="/chamados">Voltar</button>
 
-    <form>
+    <form #formChamado="ngForm" (ngSubmit)="onSubmit(formChamado)">
         <div class="form-row ">
             <div class="form-group col-md-6">
                 <label for="inputSolicitante">Solicitante</label>

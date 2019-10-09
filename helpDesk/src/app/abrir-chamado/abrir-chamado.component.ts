@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AbrirChamadoService } from './abrir-chamado.service';
+import { Chamado } from './chamado';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-abrir-chamado',
@@ -7,9 +10,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AbrirChamadoComponent implements OnInit {
 
-  constructor() { }
+  private chamado: Chamado = new Chamado();
+  public aberto = false;
+
+  constructor(private abrirChamadoService: AbrirChamadoService) { }
 
   ngOnInit() {
   }
+
+  onSubmit(formulario: NgForm) {
+    if (formulario.valid) {
+
+        console.log(this.chamado)
+        this.abrirChamadoService.abrirChamado(this.chamado);
+        this.showAlert();
+    }
+  }
+
+  showAlert() {
+
+    //aparecer caixa de mensagem
+    this.aberto = true;
+
+    //aguarda 3 Segundos e esconde
+    setTimeout(function () {
+      this.aberto = false;
+    }.bind(this), 3000);
+
+  }
+
 
 }

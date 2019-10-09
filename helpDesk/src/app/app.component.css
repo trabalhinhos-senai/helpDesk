@@ -1,0 +1,4 @@
+input, select, textarea {
+    border-bottom-width: 2px;
+    border-bottom-color: grey;
+}
