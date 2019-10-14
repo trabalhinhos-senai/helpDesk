@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Chamados } from './chamados';
+import { AbrirChamadoService } from '../abrir-chamado/abrir-chamado.service';
 
 @Component({
   selector: 'app-chamados',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChamadosComponent implements OnInit {
 
-  constructor() { }
+  Chamados = Chamados;
+
+  constructor(private chamadoService: AbrirChamadoService) { }
 
   ngOnInit() {
+    this.Chamados = this.chamadoService.getChamados()
   }
 
 }

@@ -9,33 +9,19 @@
         <thead>
             <tr>
                 <th scope="col">Nº</th>
-                <th scope="col">Nome</th>
+                <th scope="col">Titulo</th>
                 <th scope="col">Responsável</th>
                 <th scope="col">Status</th>
                 <th scope="col">Abertura</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mudar tal coisa</td>
-                <td>Jaison</td>
-                <td>Concluído</td>
-                <td>15/05/19</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Arrumar outra</td>
-                <td>Gabriel</td>
-                <td>Em andamento</td>
-                <td>18/08/19</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Arrumar outra</td>
-                <td>Igor</td>
-                <td>Atrasado</td>
-                <td>05/07/19</td>
+            <tr *ngFor="let chamado of Chamados">
+                <td>{{chamado.id}}</td>
+                <td>{{chamado.titulo}}</td>
+                <td>{{chamado.solicitante}}</td>
+                <td>Aberto</td>
+                <td>{{chamado.data_abertura}}</td>
             </tr>
         </tbody>
     </table>

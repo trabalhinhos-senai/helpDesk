@@ -14,4 +14,8 @@ export class AbrirChamadoService {
     this.Chamados.push(chamado);
   }
 
+  getChamados() {
+    return this.Chamados;
+  }
+
 }

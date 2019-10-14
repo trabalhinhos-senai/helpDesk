@@ -3,25 +3,34 @@
 <div class="container my-md-3">
     <button type="submit" class="btn btn-dark mb-md-4" routerLink="/chamados">Voltar</button>
 
+    <!-- Caixa de mensagem CADASTRADO -->
+    <div *ngIf="aberto" id="alertSucesso" class="alert alert-success box-msg" align="center" role="alert">
+        Chamado aberto com sucesso!
+    </div>
+
     <form #formChamado="ngForm" (ngSubmit)="onSubmit(formChamado)">
         <div class="form-row ">
             <div class="form-group col-md-6">
                 <label for="inputSolicitante">Solicitante</label>
-                <input name="inputSolicitante" type="Text" class="form-control" id="inputSolicitante">
+                <input name="inputSolicitante" type="Text" class="form-control" id="inputSolicitante"
+                    #inputSolicitante="ngModel" [(ngModel)]="chamado.solicitante" required>
             </div>
             <div class="form-group col-md-6">
                 <label for="inputCliente">Cliente</label>
-                <input name="inputCliente" type="Text" class="form-control" id="inputCliente">
+                <input name="inputCliente" type="Text" class="form-control" id="inputCliente" #inputCliente="ngModel"
+                    [(ngModel)]="chamado.cliente" required>
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputTítulo">Título</label>
-                <input name="inputTítulo" type="Text" class="form-control" id="inputTítulo">
+                <input name="inputTítulo" type="Text" class="form-control" id="inputTítulo" #inputTítulo="ngModel"
+                    [(ngModel)]="chamado.titulo" required>
             </div>
             <div class="form-group col-md-6">
                 <label for="selectTipo">Tipo</label>
-                <select name="selectTipo" id="selectTipo" class="form-control">
+                <select name="selectTipo" id="selectTipo" class="form-control" #selectTipo="ngModel"
+                    [(ngModel)]="chamado.tipo" required>
                     <option selected>Interno</option>
                     <option>Melhoria</option>
                     <option>Correção</option>
@@ -29,18 +38,20 @@
                 </select>
             </div>
         </div>
-        
+
         <div class="form-row">
             <div class="form-group col-md-12">
                 <label for="inputDescricao">Descrição</label>
-                <textarea name="inputDescricao" class="form-control" id="inputDescricao" rows="5"></textarea>
+                <textarea name="inputDescricao" class="form-control" id="inputDescricao" rows="5"
+                    #inputDescricao="ngModel" [(ngModel)]="chamado.descricao" required></textarea>
             </div>
         </div>
-        
+
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputResponsavel">Responsável</label>
-                <select name="inputResponsavel" id="inputResponsavel" class="form-control">
+                <select name="inputResponsavel" id="inputResponsavel" class="form-control" #inputResponsavel="ngModel"
+                    [(ngModel)]="chamado.responsavel">
                     <option selected></option>
                     <option>Gabriel</option>
                     <option>Jaison</option>
@@ -50,7 +61,8 @@
             </div>
             <div class="form-group col-md-2">
                 <label for="inputPrioridade">Prioridade</label>
-                <select name="inputPrioridade" id="inputPrioridade" class="form-control">
+                <select name="inputPrioridade" id="inputPrioridade" class="form-control" #inputPrioridade="ngModel"
+                    [(ngModel)]="chamado.prioridade">
                     <option selected>Nenhuma</option>
                     <option>Baixa</option>
                     <option>Média</option>
@@ -60,14 +72,16 @@
             </div>
             <div class="form-group col-md-2">
                 <label for="inputDataAbertura">Data abertura</label>
-                <input name="inputDataAbertura" type="date" class="form-control" id="inputDataAbertura">
+                <input name="inputDataAbertura" type="date" class="form-control" id="inputDataAbertura"
+                    #inputDataAbertura="ngModel" [(ngModel)]="chamado.data_abertura" required>
             </div>
             <div class="form-group col-md-2">
                 <label for="inputDataAlvo">Data alvo</label>
-                <input name="inputDataAlvo" type="date" class="form-control" id="inputDataAlvo">
+                <input name="inputDataAlvo" type="date" class="form-control" id="inputDataAlvo" #inputDataAlvo="ngModel"
+                    [(ngModel)]="chamado.data_alvo">
             </div>
         </div>
 
-        <button type="submit" class="btn btn-success mt-md-3">Cadastrar chamado</button>
+        <button type="submit" class="btn btn-success mt-md-3" [disabled]="!formChamado.valid">Cadastrar chamado</button>
     </form>
 </div>
