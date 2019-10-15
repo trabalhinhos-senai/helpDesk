@@ -11,24 +11,24 @@
     <form #formChamado="ngForm" (ngSubmit)="onSubmit(formChamado)">
         <div class="form-row ">
             <div class="form-group col-md-6">
-                <label for="inputSolicitante">Solicitante</label>
+                <label for="inputSolicitante" class="required">Solicitante</label>
                 <input name="inputSolicitante" type="Text" class="form-control" id="inputSolicitante"
                     #inputSolicitante="ngModel" [(ngModel)]="chamado.solicitante" required>
             </div>
             <div class="form-group col-md-6">
-                <label for="inputCliente">Cliente</label>
+                <label for="inputCliente" class="required">Cliente</label>
                 <input name="inputCliente" type="Text" class="form-control" id="inputCliente" #inputCliente="ngModel"
                     [(ngModel)]="chamado.cliente" required>
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="inputTítulo">Título</label>
+                <label for="inputTítulo" class="required">Título</label>
                 <input name="inputTítulo" type="Text" class="form-control" id="inputTítulo" #inputTítulo="ngModel"
                     [(ngModel)]="chamado.titulo" required>
             </div>
             <div class="form-group col-md-6">
-                <label for="selectTipo">Tipo</label>
+                <label for="selectTipo" class="required">Tipo</label>
                 <select name="selectTipo" id="selectTipo" class="form-control" #selectTipo="ngModel"
                     [(ngModel)]="chamado.tipo" required>
                     <option selected>Interno</option>
@@ -41,7 +41,7 @@
 
         <div class="form-row">
             <div class="form-group col-md-12">
-                <label for="inputDescricao">Descrição</label>
+                <label for="inputDescricao" class="required">Descrição</label>
                 <textarea name="inputDescricao" class="form-control" id="inputDescricao" rows="5"
                     #inputDescricao="ngModel" [(ngModel)]="chamado.descricao" required></textarea>
             </div>
@@ -71,7 +71,7 @@
                 </select>
             </div>
             <div class="form-group col-md-2">
-                <label for="inputDataAbertura">Data abertura</label>
+                <label for="inputDataAbertura" class="required">Data abertura</label>
                 <input name="inputDataAbertura" type="date" class="form-control" id="inputDataAbertura"
                     #inputDataAbertura="ngModel" [(ngModel)]="chamado.data_abertura" required>
             </div>

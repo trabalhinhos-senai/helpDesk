@@ -12,35 +12,37 @@
         <form #formUsuario="ngForm" (ngSubmit)="onSubmit(formUsuario)" class="col-8">
             <div class="form-row">
                 <div class="form-group col-md-12">
-                    <label for="inputNome">Nome</label>
+                    <label for="inputNome" class="required">Nome</label>
                     <input name="inputNome" type="Text" class="form-control" id="inputNome" required
                         #inputNome="ngModel" [(ngModel)]="usuario.nome">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-12">
-                    <label for="inputLogin">Login</label>
+                    <label for="inputLogin" class="required">Login</label>
                     <input name="inputLogin" type="Text" class="form-control" id="inputLogin" required
                         #inputLogin="ngModel" [(ngModel)]="usuario.login">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-12">
-                    <label for="inputSenha">Senha</label>
-                    <input name="inputSenha" type="password" class="form-control" id="inputSenha" required
-                        #inputSenha="ngModel" [(ngModel)]="usuario.senha">
+                    <label for="inputSenha" class="required">Senha</label>
+                    <input [pattern]="selecaoPadrao" name="inputSenha" type="password" class="form-control"
+                        id="inputSenha" required #inputSenha="ngModel" [(ngModel)]="usuario.senha">
+                    <small *ngIf="inputSenha.errors&&inputSenha.errors.pattern">{{errorMgs}}</small>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-12">
                     <label for="inputConfirmarSenha">Confirmar Senha</label>
-                    <input name="inputConfirmarSenha" type="password" class="form-control" id="inputConfirmarSenha" required
-                    #inputConfirmarSenha="ngModel" [(ngModel)]="confirmarSenha">
+                    <input name="inputConfirmarSenha" type="password" class="form-control" id="inputConfirmarSenha"
+                        required #inputConfirmarSenha="ngModel" [(ngModel)]="confirmarSenha">
+                    <small *ngIf="inputConfirmarSenha.value != inputSenha.value">Senhas não confirmam</small>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-12">
-                    <label for="selectGrupoAcesso">Grupo de acesso</label>
+                    <label for="selectGrupoAcesso" class="required">Grupo de acesso</label>
                     <select name="selectGrupoAcesso" class="form-control" id="selectGrupoAcesso" required
                         #selectGrupoAcesso="ngModel" [(ngModel)]="usuario.grupo">
                         <option selected>User</option>
@@ -48,7 +50,9 @@
                     </select>
                 </div>
             </div>
-            <button type="submit" class="btn btn-success mt-md-3" [disabled]="!formUsuario.valid">Cadastrar usuário</button>
+            <button type="submit" class="btn btn-success mt-md-3"
+                [disabled]="!formUsuario.valid || (inputConfirmarSenha.value != inputSenha.value)">Cadastrar
+                usuário</button>
         </form>
     </div>
 </div>
