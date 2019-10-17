@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
               private router: Router) {
     
     if (this.authService.usuarioEstaAutenticado) {
-      this.router.navigate(['/']);
+      this.router.navigate(['/login']);
     }
 
    }

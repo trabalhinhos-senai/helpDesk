@@ -48,7 +48,7 @@
         </div>
 
         <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-4">
                 <label for="inputResponsavel">Responsável</label>
                 <select name="inputResponsavel" id="inputResponsavel" class="form-control" #inputResponsavel="ngModel"
                     [(ngModel)]="chamado.responsavel">
@@ -70,12 +70,12 @@
                     <option>Crítica</option>
                 </select>
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
                 <label for="inputDataAbertura" class="required">Data abertura</label>
                 <input name="inputDataAbertura" type="date" class="form-control" id="inputDataAbertura"
                     #inputDataAbertura="ngModel" [(ngModel)]="chamado.data_abertura" required>
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
                 <label for="inputDataAlvo">Data alvo</label>
                 <input name="inputDataAlvo" type="date" class="form-control" id="inputDataAlvo" #inputDataAlvo="ngModel"
                     [(ngModel)]="chamado.data_alvo">
