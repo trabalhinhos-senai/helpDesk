@@ -1,0 +1,68 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container my-md-3">
+    <div class="justify-content-center d-flex h-100">
+        <form>
+            <button type="submit" class="btn btn-dark mb-md-4" routerLink="/clientes">Voltar</button>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nomeCliente">Nome</label>
+                    <input type="text" class="form-control" id="nomeCliente" placeholder="Nome do Cliente">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="cpfCnpjCliente">CNPJ / CPF</label>
+                    <input type="text" class="form-control" id="cpfCnpjCliente" placeholder="CNPJ / CPF">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="enderecoCliente">Endereço</label>
+                    <input type="text" class="form-control" id="enderecoCliente" placeholder="Rua Adolfo Cristo ...">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="numeroCliente">Número</label>
+                    <input type="number" class="form-control" id="numeroCliente" placeholder="42...">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="cidadeCliente">Cidade</label>
+                    <select id="cidadeCliente" class="form-control">
+                        <option selected>Selecione...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="estadoCliente">Estado</label>
+                    <select id="estadoCliente" class="form-control">
+                        <option selected>Selecione...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="bairroCliente">Bairro</label>
+                    <select id="bairroCliente" class="form-control">
+                        <option selected>Selecione...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="emailCliente">Email</label>
+                    <input type="email" class="form-control" id="emailCliente" placeholder="seuemail@seuemail.com.br">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="telefoneCliente">Telefone</label>
+                    <input type="text" class="form-control" id="telefoneCliente" placeholder="3333-3333">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="celularCliente">Celular</label>
+                    <input type="text" class="form-control" id="celularCliente" placeholder="99999-9999">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Cadastrar cliente</button>
+        </form>
+    </div>
+</div>

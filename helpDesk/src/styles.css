@@ -29,15 +29,6 @@
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
-body {
-    font-family: var(--font-family-sans-serif);
-}
-
-input, select, textarea {
-    border-bottom-width: 2px !important;
-    border-bottom-color: grey !important; 
-}
-
 .required:after {
     content: "*";
     color: var(--red); 

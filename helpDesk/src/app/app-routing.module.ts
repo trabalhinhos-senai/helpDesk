@@ -5,7 +5,9 @@ import { ChamadosComponent } from './chamados/chamados.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './guards/auth-guard';
 import { UsuarioComponent } from './usuario/usuario.component';
-import { CadUsuarioComponent } from './cad-usuario/cad-usuario.component'
+import { CadUsuarioComponent } from './cad-usuario/cad-usuario.component';
+import { ClientesComponent } from './clientes/clientes.component';
+import { CadClienteComponent } from './cad-cliente/cad-cliente.component'
 
 const routes: Routes = [
   { path: 'abrir-chamado', component: AbrirChamadoComponent/*, canActivate: [AuthGuard]*/ },
@@ -13,6 +15,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'usuarios', component: UsuarioComponent },
   { path: 'cad-usuario', component: CadUsuarioComponent },
+  { path: 'clientes', component: ClientesComponent },
+  { path: 'cad-cliente', component: CadClienteComponent },
   { path: '', redirectTo: '/chamados', pathMatch: 'full' }
 ];
 

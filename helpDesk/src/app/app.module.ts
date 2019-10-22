@@ -12,6 +12,8 @@ import { AuthService } from './login/auth.service';
 import { AuthGuard } from './guards/auth-guard';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { CadUsuarioComponent } from './cad-usuario/cad-usuario.component';
+import { CadClienteComponent } from './cad-cliente/cad-cliente.component';
+import { ClientesComponent } from './clientes/clientes.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { CadUsuarioComponent } from './cad-usuario/cad-usuario.component';
     LoginComponent,
     UsuarioComponent,
     CadUsuarioComponent,
+    CadClienteComponent,
+    ClientesComponent,
   ],
   imports: [
     BrowserModule,

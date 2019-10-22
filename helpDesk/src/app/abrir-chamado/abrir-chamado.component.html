@@ -1,14 +1,14 @@
 <app-nav-bar></app-nav-bar>
 
 <div class="container my-md-3">
-    <button type="submit" class="btn btn-dark mb-md-4" routerLink="/chamados">Voltar</button>
-
     <!-- Caixa de mensagem CADASTRADO -->
     <div *ngIf="aberto" id="alertSucesso" class="alert alert-success box-msg" align="center" role="alert">
         Chamado aberto com sucesso!
     </div>
 
     <form #formChamado="ngForm" (ngSubmit)="onSubmit(formChamado)">
+        <button type="submit" class="btn btn-dark mb-md-4" routerLink="/chamados">Voltar</button>
+
         <div class="form-row ">
             <div class="form-group col-md-6">
                 <label for="inputSolicitante" class="required">Solicitante</label>
@@ -27,7 +27,7 @@
                 <input name="inputTítulo" type="Text" class="form-control" id="inputTítulo" #inputTítulo="ngModel"
                     [(ngModel)]="chamado.titulo" required>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-5">
                 <label for="selectTipo" class="required">Tipo</label>
                 <select name="selectTipo" id="selectTipo" class="form-control" #selectTipo="ngModel"
                     [(ngModel)]="chamado.tipo" required>
@@ -37,6 +37,7 @@
                     <option>Problema</option>
                 </select>
             </div>
+            <button class="btn btn-primary">+</button>
         </div>
 
         <div class="form-row">
