@@ -27,17 +27,22 @@
                 <input name="inputTítulo" type="Text" class="form-control" id="inputTítulo" #inputTítulo="ngModel"
                     [(ngModel)]="chamado.titulo" required>
             </div>
-            <div class="form-group col-md-5">
+            <div class="form-group col-md-6">
                 <label for="selectTipo" class="required">Tipo</label>
-                <select name="selectTipo" id="selectTipo" class="form-control" #selectTipo="ngModel"
-                    [(ngModel)]="chamado.tipo" required>
-                    <option selected>Interno</option>
-                    <option>Melhoria</option>
-                    <option>Correção</option>
-                    <option>Problema</option>
-                </select>
+                <div class="input-group">
+                    <select name="selectTipo" id="selectTipo" class="form-control" #selectTipo="ngModel"
+                        [(ngModel)]="chamado.tipo" required>
+                        <option selected>Interno</option>
+                        <option>Melhoria</option>
+                        <option>Correção</option>
+                        <option>Problema</option>
+                    </select>
+                    <div class="input-group-append ml-2">
+                        <button class="btn btn-outline-primary" type="button" data-toggle="modal"
+                            data-target="#cadTipoModal">+</button>
+                    </div>
+                </div>
             </div>
-            <button class="btn btn-primary">+</button>
         </div>
 
         <div class="form-row">
@@ -85,4 +90,29 @@
 
         <button type="submit" class="btn btn-success mt-md-3" [disabled]="!formChamado.valid">Cadastrar chamado</button>
     </form>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="cadTipoModal" tabindex="-1" role="dialog" aria-labelledby="cadTipoModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cadTipoModalLabel">Cadastrar novo Tipo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form #formCadTipo="ngForm" (ngSubmit)="onSubmit(formCadTipo)">
+                    <label for="inputCadTipo" class="required">Tipo</label>
+                    <input name="inputCadTipo" type="text" class="form-control" id="inputCadTipo" required>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar e fechar</button>
+                <button type="submit" class="btn btn-primary" [disabled]="!formCadTipo.valid">Cadastrar</button>
+            </div>
+        </div>
+    </div>
 </div>
