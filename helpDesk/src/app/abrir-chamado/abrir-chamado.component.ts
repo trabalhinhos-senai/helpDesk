@@ -21,6 +21,10 @@ export class AbrirChamadoComponent implements OnInit {
   onSubmit(formulario: NgForm) {
     if (formulario.valid) {
 
+      this.chamado.id =  
+      Math.random().toString(36).substring(2, 15) 
+      + Math.random().toString(36).substring(2, 15);
+
         console.log(this.chamado)
         this.abrirChamadoService.abrirChamado(this.chamado);
         this.showAlert();

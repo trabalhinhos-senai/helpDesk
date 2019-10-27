@@ -18,4 +18,16 @@ export class AbrirChamadoService {
     return this.Chamados;
   }
 
+  getChamadoById(id: string) {
+    
+    for (let i = 0; i < this.Chamados.length; i++) {
+      const chamado = this.Chamados[i];
+
+      if (chamado.id === id) {
+        return chamado;
+      }
+      
+    }    
+  }
+
 }

@@ -8,8 +8,8 @@ export const Chamados = [
         descricao: "Estou com um problema muito problematico",
         responsavel: "Jaison",
         prioridade: "Alta",
-        data_abertura: "08/10/2019",
-        data_alvo: "20/10/2019"
+        data_abertura: new Date("2019-01-26 00:00:00").toLocaleDateString(),
+        data_alvo: new Date("2019-01-29 00:00:00").toLocaleDateString(),
     },
     {
         id: "2",
@@ -20,7 +20,7 @@ export const Chamados = [
         descricao: "Estou com um problema para ser corrigido",
         responsavel: "Leonardo",
         prioridade: "Baixa",
-        data_abertura: "08/10/2019",
-        data_alvo: "30/10/2019"
+        data_abertura: new Date("2019-08-28 00:00:00").toLocaleDateString(),
+        data_alvo: new Date("2019-09-12 00:00:00").toLocaleDateString()
     }
 ]

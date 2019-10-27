@@ -15,6 +15,7 @@ import { CadUsuarioComponent } from './cad-usuario/cad-usuario.component';
 import { CadClienteComponent } from './cad-cliente/cad-cliente.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { FooterComponent } from './footer/footer.component';
+import { ChamadoDetailComponent } from './chamado-detail/chamado-detail.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FooterComponent } from './footer/footer.component';
     CadClienteComponent,
     ClientesComponent,
     FooterComponent,
+    ChamadoDetailComponent,
   ],
   imports: [
     BrowserModule,

@@ -16,7 +16,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let chamado of Chamados">
+            <tr *ngFor="let chamado of Chamados" routerLink="/chamado-detalhe/{{chamado.id}}">
                 <td>{{chamado.id}}</td>
                 <td>{{chamado.titulo}}</td>
                 <td>{{chamado.solicitante}}</td>
