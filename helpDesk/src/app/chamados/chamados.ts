@@ -9,7 +9,7 @@ export const Chamados = [
         responsavel: "Jaison",
         prioridade: "Alta",
         data_abertura: new Date("2019-01-26 00:00:00").toLocaleDateString(),
-        data_alvo: new Date("2019-01-29 00:00:00").toLocaleDateString(),
+        data_alvo: new Date("2019-01-29 00:00:00").toISOString().slice(0,10),
     },
     {
         id: "2",
@@ -21,6 +21,6 @@ export const Chamados = [
         responsavel: "Leonardo",
         prioridade: "Baixa",
         data_abertura: new Date("2019-08-28 00:00:00").toLocaleDateString(),
-        data_alvo: new Date("2019-09-12 00:00:00").toLocaleDateString()
+        data_alvo: new Date("2019-09-12 00:00:00").toISOString().slice(0,10),
     }
 ]

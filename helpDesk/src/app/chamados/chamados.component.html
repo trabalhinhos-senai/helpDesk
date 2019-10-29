@@ -13,15 +13,21 @@
                 <th scope="col">Responsável</th>
                 <th scope="col">Status</th>
                 <th scope="col">Abertura</th>
+                <th scope="col">Editar</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let chamado of Chamados" routerLink="/chamado-detalhe/{{chamado.id}}">
+            <tr *ngFor="let chamado of Chamados">
                 <td>{{chamado.id}}</td>
                 <td>{{chamado.titulo}}</td>
                 <td>{{chamado.solicitante}}</td>
                 <td>Aberto</td>
                 <td>{{chamado.data_abertura}}</td>
+                <td>
+                    <button type="button" class="btn btn-success" routerLink="/chamado-detalhe/{{chamado.id}}">
+                        Editar
+                    </button>
+                </td>
             </tr>
         </tbody>
     </table>

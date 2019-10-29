@@ -12,6 +12,7 @@
                 <th scope="col">Nome</th>
                 <th scope="col">Login</th>
                 <th scope="col">Grupo de acesso</th>
+                <th scope="col">Editar</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,11 @@
                 <td>{{usuario.nome}}</td>
                 <td>{{usuario.login}}</td>
                 <td>{{usuario.grupo}}</td>
+                <td>
+                    <button type="button" class="btn btn-success" routerLink="/usuario-detalhe/{{usuario.id}}">
+                        Editar
+                    </button>
+                </td>
             </tr>
         </tbody>
     </table>

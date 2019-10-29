@@ -4,13 +4,13 @@ export const Usuarios = [
         nome: "Igor Ponchielli",
         login: "igor.ponchielli",
         senha: "igor123",
-        grupo: "admin"
+        grupo: "Admin"
     },
     {
         id: "2",
         nome: "Amanda Nudes",
         login: "amanda.nu",
         senha: "nu123",
-        grupo: "user"
+        grupo: "User"
     }
 ]

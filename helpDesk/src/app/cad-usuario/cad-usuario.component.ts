@@ -68,7 +68,9 @@ export class CadUsuarioComponent implements OnInit {
 
     //aguarda 3 Segundos e esconde
     setTimeout(function () {
+      alert("Cadastrado com sucesso!");
       this.cadastrado = false;
+
       //console.log(this.cadastrado);
     }.bind(this), 3000);
 

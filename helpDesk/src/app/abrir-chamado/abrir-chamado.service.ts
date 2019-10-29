@@ -25,9 +25,7 @@ export class AbrirChamadoService {
 
       if (chamado.id === id) {
         return chamado;
-      }
-      
+      }   
     }    
   }
-
 }

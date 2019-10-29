@@ -21,18 +21,10 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-12">
-                    <label for="inputSenha" class="required">Senha</label>
+                    <label for="inputSenha" class="required">Nova senha</label>
                     <input [pattern]="selecaoPadrao" name="inputSenha" type="password" class="form-control"
                         id="inputSenha" required #inputSenha="ngModel" [(ngModel)]="usuario.senha">
                     <small *ngIf="inputSenha.errors&&inputSenha.errors.pattern">{{errorMgs}}</small>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="inputConfirmarSenha">Confirmar Senha</label>
-                    <input name="inputConfirmarSenha" type="password" class="form-control" id="inputConfirmarSenha"
-                        required #inputConfirmarSenha="ngModel" [(ngModel)]="confirmarSenha">
-                    <small *ngIf="inputConfirmarSenha.value != inputSenha.value">Senhas não confirmam</small>
                 </div>
             </div>
             <div class="form-row">
@@ -45,8 +37,7 @@
                     </select>
                 </div>
             </div>
-            <button type="submit" class="btn btn-success mt-md-3"
-                [disabled]="!formUsuario.valid || (inputConfirmarSenha.value != inputSenha.value)">Cadastrar
+            <button type="submit" class="btn btn-success mt-md-3">Editar
                 usuário</button>
         </form>
     </div>
