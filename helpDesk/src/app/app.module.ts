@@ -17,6 +17,7 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { FooterComponent } from './footer/footer.component';
 import { ChamadoDetailComponent } from './chamado-detail/chamado-detail.component';
 import { UsuarioDetailComponent } from './usuario-detail/usuario-detail.component';
+import { ClienteDetailComponent } from './cliente-detail/cliente-detail.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { UsuarioDetailComponent } from './usuario-detail/usuario-detail.componen
     FooterComponent,
     ChamadoDetailComponent,
     UsuarioDetailComponent,
+    ClienteDetailComponent,
   ],
   imports: [
     BrowserModule,

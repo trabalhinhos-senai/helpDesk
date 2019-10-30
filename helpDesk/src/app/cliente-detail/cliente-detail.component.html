@@ -2,7 +2,7 @@
 
 <div class="container my-md-3">
     <div class="justify-content-center d-flex h-100">
-        <form #formCliente="ngForm" (ngSubmit)="onSubmit(formCliente)">
+        <form>
             <button type="submit" class="btn btn-dark mb-md-4" routerLink="/clientes">Voltar</button>
 
             <div class="form-row">
@@ -35,7 +35,8 @@
                     <select name="cidadeCliente" id="cidadeCliente" class="form-control"
                     #cidadeCliente="ngModel" [(ngModel)]="cliente.cidade">
                         <option selected>Selecione...</option>
-                        <option>...</option>
+                        <option>Ascurra</option>
+                        <option>Indaial</option>
                     </select>
                 </div>
                 <div class="form-group col-md-4">
@@ -43,7 +44,8 @@
                     <select name="estadoCliente" id="estadoCliente" class="form-control"
                     #estadoCliente="ngModel" [(ngModel)]="cliente.estado">
                         <option selected>Selecione...</option>
-                        <option>...</option>
+                        <option>Santa Catarina</option>
+                        <option>Rio de Janeiro</option>
                     </select>
                 </div>
                 <div class="form-group col-md-4">
@@ -51,7 +53,8 @@
                     <select name="bairroCliente" id="bairroCliente" class="form-control"
                     #bairroCliente="ngModel" [(ngModel)]="cliente.bairro">
                         <option selected>Selecione...</option>
-                        <option>...</option>
+                        <option>Monte Alegre</option>
+                        <option>Tapajos</option>
                     </select>
                 </div>
             </div>
@@ -72,7 +75,7 @@
                     #celularCliente="ngModel" [(ngModel)]="cliente.celular">
                 </div>
             </div>
-            <button type="submit" class="btn btn-success" [disabled]="!formCliente.valid">Cadastrar cliente</button>
+            <button type="submit" class="btn btn-success" [disabled]>Atualizar cliente</button>
         </form>
     </div>
 </div>

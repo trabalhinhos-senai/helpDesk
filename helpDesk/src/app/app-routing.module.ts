@@ -10,6 +10,7 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { CadClienteComponent } from './cad-cliente/cad-cliente.component'
 import { ChamadoDetailComponent } from './chamado-detail/chamado-detail.component';
 import { UsuarioDetailComponent } from './usuario-detail/usuario-detail.component';
+import { ClienteDetailComponent } from './cliente-detail/cliente-detail.component';
 
 const routes: Routes = [
   { path: 'abrir-chamado', component: AbrirChamadoComponent/*, canActivate: [AuthGuard]*/ },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'cad-cliente', component: CadClienteComponent },
   { path: 'chamado-detalhe/:id', component: ChamadoDetailComponent },
   { path: 'usuario-detalhe/:id', component: UsuarioDetailComponent },
+  { path: 'cliente-detalhe/:id', component: ClienteDetailComponent },
   { path: '', redirectTo: '/chamados', pathMatch: 'full' }
 ];
 
