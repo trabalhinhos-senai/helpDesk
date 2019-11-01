@@ -2,7 +2,7 @@
 
 <div class="container my-md-3">
 
-    <form #formChamado="ngForm" (ngSubmit)="onSubmit(formChamado)">
+    <form #formChamado="ngForm">
         <button type="submit" class="btn btn-dark mb-md-4 my-sm-2" routerLink="/chamados">Voltar</button>
 
         <div class="form-row ">
@@ -75,7 +75,8 @@
             <div class="form-group col-md-3">
                 <label for="inputDataAbertura" class="required">Data abertura</label>
                 <input name="inputDataAbertura" type="text" class="form-control" id="inputDataAbertura"
-                    #inputDataAbertura="ngModel" datetime="yyyy-MM-dd" [(ngModel)]="chamado.data_abertura" required disabled>
+                    #inputDataAbertura="ngModel" datetime="yyyy-MM-dd" [(ngModel)]="chamado.data_abertura" required
+                    disabled>
             </div>
             <div class="form-group col-md-3">
                 <label for="inputDataAlvo">Data alvo</label>
@@ -83,8 +84,19 @@
                     [(ngModel)]="chamado.data_alvo">
             </div>
         </div>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="inputStatus">Status</label>
+                <select name="inputStatus" id="inputStatus" class="form-control" #inputStatus="ngModel"
+                    [(ngModel)]="chamado.status">
+                    <option selected>Aguardando</option>
+                    <option>Em desenvolvimento</option>
+                    <option>Concluído</option>
+                </select>
+            </div>
+        </div>
 
-        <button type="submit" class="btn btn-success mt-md-3" [disabled]>Atualizar chamado</button>
+        <button id="btnAtualizarChamado" type="submit" class="btn btn-success mt-md-3" onclick="atualizaChamdo()">Atualizar chamado</button>
     </form>
 </div>
 

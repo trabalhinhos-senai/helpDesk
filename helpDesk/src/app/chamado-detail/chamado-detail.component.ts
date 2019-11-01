@@ -29,4 +29,8 @@ export class ChamadoDetailComponent implements OnInit {
     console.log(this.chamadoService.getChamadoById(id))
   }
 
+  atualizaChamado() {
+    //back-end salvar no banco as alterações
+    //Caso inputStatus == Concluído, remover da tabela de consulta, MAS NÃO DO BANCO, MONGOL
+  }
 }

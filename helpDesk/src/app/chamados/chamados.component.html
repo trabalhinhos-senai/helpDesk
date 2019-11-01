@@ -1,8 +1,17 @@
 <app-nav-bar></app-nav-bar>
 <div class="container">
-    <div class="row">
-        <div class="col-md-12 my-md-3">
+    <div class="my-md-3">
+        <div>
             <button class="btn btn-success" routerLink="/abrir-chamado">Nova tarefa</button>
+        </div>
+        <div style="float: right; margin-top: -37px;">
+            <div style="float: left;">
+                <input placeholder="Nº chamado" name="inputPesquisa" type="Text" class="form-control inputPesquisar"
+                    id="inputPesquisa" #inputPesquisa>
+            </div>
+            <div style="float: left;">
+                <button class="btn btn-success btnPesquisar" (click)="procuraChamado(inputPesquisa.value)">Pesquisar</button>
+            </div>
         </div>
     </div>
     <table class="table table-hover table-striped">
@@ -13,7 +22,7 @@
                 <th scope="col">Responsável</th>
                 <th scope="col">Status</th>
                 <th scope="col">Abertura</th>
-                <th scope="col">Editar</th>
+                <th scope="col">Detalhes</th>
             </tr>
         </thead>
         <tbody>
@@ -21,11 +30,11 @@
                 <td>{{chamado.id}}</td>
                 <td>{{chamado.titulo}}</td>
                 <td>{{chamado.solicitante}}</td>
-                <td>Aberto</td>
+                <td>{{chamado.status}}</td>
                 <td>{{chamado.data_abertura}}</td>
                 <td>
                     <button type="button" class="btn btn-success" routerLink="/chamado-detalhe/{{chamado.id}}">
-                        Editar
+                        Detalhes
                     </button>
                 </td>
             </tr>
